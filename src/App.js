@@ -39,25 +39,6 @@ class App extends Component {
               path='/'
               render={props => (
                 <Fragment>
-                  <Navbar font='font-en' link='/en' nav='English' />
-                  <CardsBD data={data} />
-                  <div className='container'>
-                    <CountryPickerBD
-                      country={country}
-                      localData={localData}
-                      handleCountryChange={this.handleCountryChange}
-                    />
-                    <Charts font='font-bd' msg='গত ৩০ দিনের তথ্য' />
-                  </div>
-                  <Footer font='font-bd' msg='ডেভেলপ করেছে' name='হাসিব' />
-                </Fragment>
-              )}
-            />
-            <Route
-              exact
-              path='/en'
-              render={props => (
-                <Fragment>
                   <Cards data={data} />
                   <div className='container'>
                     <CountryPicker
@@ -71,6 +52,25 @@ class App extends Component {
                 </Fragment>
               )}
             />
+              <Route
+                exact
+                path='/bd'
+                render={props => (
+                  <Fragment>
+                    <Navbar font='font-en' link='/' nav='English' />
+                    <CardsBD data={data} />
+                    <div className='container'>
+                      <CountryPickerBD
+                        country={country}
+                        localData={localData}
+                        handleCountryChange={this.handleCountryChange}
+                      />
+                      <Charts font='font-bd' msg='গত ৩০ দিনের তথ্য' />
+                    </div>
+                    <Footer font='font-bd' msg='ডেভেলপ করেছে' name='হাসিব' />
+                  </Fragment>
+                )}
+              />
           </Switch>
         </div>
       </Router>
