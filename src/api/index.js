@@ -8,7 +8,7 @@ const url = 'https://covid19.mathdro.id/api';
 // Global Data
 
 export const fetchDate = async () => {
-  const text = await axios.get(`https://corona.lmao.ninja/v2/countries/bd`);
+  const text = await axios.get(`https://corona.lmao.ninja/v2/countries/in`);
   console.log(text);
   try {
     const {
@@ -32,7 +32,7 @@ export const fetchDate = async () => {
 // Local Country
 
 export const fetchLocalCountry = async countryName => {
-  let selectCountry = 'Bangladesh';
+  let selectCountry = 'India';
   if (countryName) {
     selectCountry = countryName;
   }

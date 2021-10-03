@@ -12,7 +12,7 @@ import {
 import { fetchDate, fetchLocalCountry } from './api';
 import Footer from './components/Footer';
 class App extends Component {
-  state = { data: {}, localData: {}, country: 'Bangladesh' };
+  state = { data: {}, localData: {}, country: 'India' };
 
   async componentDidMount() {
     try {
@@ -58,7 +58,6 @@ class App extends Component {
               path='/en'
               render={props => (
                 <Fragment>
-                  <Navbar font='font-bd' link='/' nav='বাংলা' />
                   <Cards data={data} />
                   <div className='container'>
                     <CountryPicker
@@ -68,7 +67,7 @@ class App extends Component {
                     />
                     <Charts font='font-en' msg={`Last 30 day's information`} />
                   </div>
-                  <Footer font='font-en' msg='Developed' by='by' name='Hasib' />
+                  <Footer font='font-en' msg='Developed' by='by' name='Rehan' />
                 </Fragment>
               )}
             />

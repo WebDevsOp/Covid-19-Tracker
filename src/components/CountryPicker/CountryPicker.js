@@ -54,7 +54,7 @@ const CountryPicker = ({ handleCountryChange, localData }) => {
                 option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
               }
             >
-              <Option value='bangladesh'>Bangladesh</Option>
+              <Option value='India'>India</Option>
               {fetchedCountryData?.map((data, i) => (
                 <Option key={i} value={data.code}>
                   {data.country}
